@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    overflow-wrap: normal;
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+html {
+    box-sizing: border-box;
+    text-size-adjust: none;
+    -webkit-overflow-scrolling: touch;
+    font-family: "Sandoll Jebi", "Noto Sans KR", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    letter-spacing: -0.025em;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: white;
+    background-color: transparent !important;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+    display: none;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+a {
+    outline-width: 0;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    &:active,
+    &:hover {
+        outline: 0;
+    }
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    font-size: 100%;
+    font-family: inherit;
+    cursor: pointer;
+
+    &[type="button"],
+    &[type="reset"],
+    &[type="submit"] {
+        appearance: button;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+    height: auto;
+}
+
+[type="search"]::-webkit-search-decoration {
+    appearance: none;
+}
+
+::-webkit-file-upload-button {
+    appearance: button;
+    font: inherit;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+main {
+    display: block;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: none;
+    @include tablet {
+        &::after {
+            content: " (" attr(title) ") ";
+        }
+    }
+}

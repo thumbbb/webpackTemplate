@@ -1,0 +1,57 @@
+/* resposive */
+@mixin tablet {
+    @media (width <= 1279px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (width <= 500px) {
+        @content;
+    }
+}
+
+@mixin mobile-min-fix {
+    @media (width <= 340px) {
+        @content;
+    }
+}
+
+@mixin device-rotate-tablet {
+    @media (height <= 820px) {
+        @content;
+    }
+}
+
+@mixin device-rotate {
+    @media (height <= 420px) {
+        @content;
+    }
+}
+
+.pc-element {
+    display: block;
+    @include tablet {
+        display: none;
+    }
+}
+
+.mo-element {
+    display: none;
+    @include tablet {
+        display: block;
+    }
+}
+
+/* for a11y */
+@mixin a11y-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
