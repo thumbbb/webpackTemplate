@@ -1,0 +1,18 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "ignorePatterns": ["node_modules/*", "dist/*", "!.prettierrc.js"],
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["html", "prettier"],
+    "rules": {
+        "prettier/prettier": ["error", {}],
+        "no-undef": "off",
+        "no-unused-vars": "off"
+    }
+}
